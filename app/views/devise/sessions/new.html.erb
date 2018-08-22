@@ -1,0 +1,40 @@
+<!--start header-->
+<header class="l-header l-header-admin js-header">
+    <div class="l-header-top u-clear">
+        
+            <div class="l-header-logo">
+            
+<a class="logo " href="./">
+    <%= image_tag('logo-admin.png', height:28, width:138) %> 
+</a>
+
+            </div>
+            <div class="l-header-text">
+                <p>ADMIN PAGE</p>
+            </div>
+        
+    </div>
+</header>
+<!--end header-->
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+   <div class="l-container u-clear">
+
+        <!--start l-main-->
+        <main class="l-main js-main">
+            <div class="l-main-block"></div>
+                <label for="user-id" class="form-title">USER ID</label>
+                <input type="text" id="user-id" name='user[email]' class="input input-text">
+                <label for="password" class="form-title">PASSWORD</label>
+                <input type="password" id="password" name='user[password]' class="input input-text">
+                <label for="submit" class="form-button">
+          <div class="button">
+            <p class="button-text">Login</p>
+          </div>
+                </label>
+                    <input type="submit" id="submit" class="input input-submit">
+         
+        </main>
+        <!--end l-main-->
+
+    </div>
+<% end %>

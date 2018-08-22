@@ -57,12 +57,15 @@
     <span class="hamburger-item"></span>
 </a>
             </div>
-        
+            <ul>
+         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+     </ul>
     </div>
 </header>
 <!--end header-->
 
     <nav class="nav js-nav">
+
     <ul class="nav-list">
         <li class="nav-item">
             <a href="#" class="nav-link">TOP</a>
