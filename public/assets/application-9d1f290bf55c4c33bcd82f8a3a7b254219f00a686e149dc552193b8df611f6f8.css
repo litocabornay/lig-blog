@@ -1,0 +1,1725 @@
+@charset "UTF-8";
+/* 1-setting */
+/*
+#Variables color
+
+@color-default #333
+@color-base #f7f7f7
+@color-border #ccc
+
+@color-main #825794
+@color-sub #ffbb4d
+@color-caution #e74c3c
+
+@color-facebook #305097
+@color-twitter #00aced
+@color-line #00c300
+@color-instagram #325C86
+*/
+/* Variables except color */
+/* Variables font */
+/* 2-mixin */
+/* 3-base */
+/* line 24, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  line-height: 1;
+  word-break: break-all;
+}
+
+/* line 26, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, menu, nav, section, summary, time, mark, audio, video, input, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 28, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+img {
+  vertical-align: bottom;
+}
+
+/* line 30, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+main, article, aside, details, figcaption, figure, footer, header, menu, nav, section, div, address, iframe, canvas, hr, textarea {
+  display: block;
+}
+
+/* line 32, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+iframe {
+  max-width: 100% !important;
+}
+
+/* line 34, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+/* line 36, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+a, label {
+  cursor: pointer;
+}
+
+/* line 38, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+blockquote {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+/* line 40, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+address, em {
+  font-style: normal;
+}
+
+/* line 42, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+hr {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 44, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+ul, ol, li {
+  list-style: none;
+}
+
+/* line 46, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+textarea {
+  resize: vertical;
+  overflow: hidden;
+  -webkit-appearance: none;
+  border: 0;
+}
+
+/* line 48, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+input, button, select {
+  vertical-align: middle;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+/* line 50, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+table {
+  border-collapse: collapse;
+}
+
+/* line 52, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+*:before, *:after {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+/* line 54, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 56, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+br {
+  font-size: 0;
+}
+
+/* line 58, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+::-moz-selection {
+  background: #ccc;
+  color: #fff;
+}
+
+/* line 60, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+::selection {
+  background: #ccc;
+  color: #fff;
+}
+
+/* line 62, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+input::-moz-selection, textarea::-moz-selection {
+  color: #333;
+}
+
+/* line 64, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+input::selection, textarea::selection {
+  color: #333;
+}
+
+/* line 66, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  /* width: 100%; */
+}
+
+/* line 68, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background: #fff;
+  color: #333;
+  width: 100%;
+  letter-spacing: 0.02em;
+}
+
+/* line 70, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+input, button, select, textarea {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+/* line 72, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+input:focus, button:focus, select:focus, textarea:focus, a:focus, div:focus, aside:focus {
+  outline: none;
+}
+
+/* line 74, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+/* line 76, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 78, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.for-no-js, .for-old {
+  text-align: center;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  z-index: 11;
+}
+
+/* line 80, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.for-old {
+  display: none;
+}
+
+/* line 82, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.lt-ie9 .for-old {
+  display: block;
+}
+
+/* 4-layout */
+/* line 85, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-container {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 87, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-footer {
+  padding: 10px;
+  position: relative;
+  margin-top: 15px;
+}
+
+/* line 89, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-footer-button {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+/* line 91, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-footer-copyright {
+  text-align: center;
+}
+
+/* line 93, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-header {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+}
+
+/* line 95, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-header-top {
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* line 97, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-header-logo {
+  float: left;
+}
+
+/* line 99, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-header-hamburger {
+  float: right;
+}
+
+/* line 101, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-header-text {
+  float: right;
+}
+
+/* line 103, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-header-text p {
+  display: inline-block;
+  color: #fff;
+  font-size: 10px;
+  vertical-align: bottom;
+}
+
+/* line 105, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-header-admin .l-header-top {
+  background-color: #333;
+}
+
+/* line 107, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-main {
+  width: 100%;
+}
+
+/* line 109, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-main-block {
+  display: block;
+  width: 100%;
+  height: 71px;
+}
+
+/* line 111, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-main-button {
+  margin-top: 30px;
+  display: block;
+}
+
+/* line 113, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-main.is-lock {
+  position: fixed;
+}
+
+/* line 115, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-sidebar {
+  float: right;
+  width: 300px;
+}
+
+/* line 117, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-sidebar-item {
+  margin-bottom: 20px;
+}
+
+/* line 119, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-sidebar-item:last-child {
+  margin-bottom: 0;
+}
+
+/* line 121, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-grid {
+  text-align: left;
+  /* Break point large */
+  /* Break point medium */
+  /* Break point small */
+}
+
+/* line 123, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-grid .l-grid-inner {
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+/* line 125, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-grid .l-grid-item {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+/* line 127, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-grid.l-grid-col2 .l-grid-item {
+  width: 50%;
+}
+
+/* line 129, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.android .l-grid.l-grid-col2 .l-grid-item {
+  width: 49.99999%;
+}
+
+/* line 131, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-grid.l-grid-col3 .l-grid-item {
+  width: 33.3333%;
+}
+
+/* line 133, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-grid.l-grid-col4 .l-grid-item {
+  width: 25%;
+}
+
+/* line 135, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.android .l-grid.l-grid-col4 .l-grid-item {
+  width: 24.99999%;
+}
+
+/* line 137, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-grid.l-grid-col5 .l-grid-item {
+  width: 20%;
+}
+
+/* line 139, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.android .l-grid.l-grid-col5 .l-grid-item {
+  width: 19.99999%;
+}
+
+/* line 141, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-grid.l-grid-col6 .l-grid-item {
+  width: 16.6666%;
+}
+
+@media all and (max-width: 1024px) {
+  /* line 143, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-lg-col1 .l-grid-item {
+    width: 100%;
+  }
+
+  /* line 144, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-lg-col2 .l-grid-item {
+    width: 50%;
+  }
+
+  /* line 145, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .android .l-grid.l-grid-lg-col2 .l-grid-item {
+    width: 49.99999%;
+  }
+
+  /* line 146, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-lg-col3 .l-grid-item {
+    width: 33.3333%;
+  }
+
+  /* line 147, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-lg-col4 .l-grid-item {
+    width: 25%;
+  }
+
+  /* line 148, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .android .l-grid.l-grid-lg-col4 .l-grid-item {
+    width: 24.99999%;
+  }
+
+  /* line 149, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-lg-col5 .l-grid-item {
+    width: 20%;
+  }
+
+  /* line 150, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .android .l-grid.l-grid-lg-col5 .l-grid-item {
+    width: 19.99999%;
+  }
+
+  /* line 151, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-lg-col6 .l-grid-item {
+    width: 16.6666%;
+  }
+}
+@media all and (max-width: 780px) {
+  /* line 153, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-md-col1 .l-grid-item {
+    width: 100%;
+  }
+
+  /* line 154, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-md-col2 .l-grid-item {
+    width: 50%;
+  }
+
+  /* line 155, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .android .l-grid.l-grid-md-col2 .l-grid-item {
+    width: 49.99999%;
+  }
+
+  /* line 156, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-md-col3 .l-grid-item {
+    width: 33.3333%;
+  }
+
+  /* line 157, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-md-col4 .l-grid-item {
+    width: 25%;
+  }
+
+  /* line 158, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .android .l-grid.l-grid-md-col4 .l-grid-item {
+    width: 24.99999%;
+  }
+
+  /* line 159, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-md-col5 .l-grid-item {
+    width: 20%;
+  }
+
+  /* line 160, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .android .l-grid.l-grid-md-col5 .l-grid-item {
+    width: 19.99999%;
+  }
+
+  /* line 161, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-md-col6 .l-grid-item {
+    width: 16.6666%;
+  }
+}
+@media all and (max-width: 480px) {
+  /* line 163, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-sm-col1 .l-grid-item {
+    width: 100%;
+  }
+
+  /* line 164, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-sm-col2 .l-grid-item {
+    width: 50%;
+  }
+
+  /* line 165, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .android .l-grid.l-grid-sm-col2 .l-grid-item {
+    width: 49.99999%;
+  }
+
+  /* line 166, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-sm-col3 .l-grid-item {
+    width: 33.3333%;
+  }
+
+  /* line 167, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-sm-col4 .l-grid-item {
+    width: 25%;
+  }
+
+  /* line 168, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .android .l-grid.l-grid-sm-col4 .l-grid-item {
+    width: 24.99999%;
+  }
+
+  /* line 169, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-sm-col5 .l-grid-item {
+    width: 20%;
+  }
+
+  /* line 170, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .android .l-grid.l-grid-sm-col5 .l-grid-item {
+    width: 19.99999%;
+  }
+
+  /* line 171, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+  .l-grid.l-grid-sm-col6 .l-grid-item {
+    width: 16.6666%;
+  }
+}
+/* line 173, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-index-list > li {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 20px;
+}
+
+/* line 175, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-index-list > li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* line 177, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.l-index-button {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* 5-module */
+/*
+iconfont
+
+iconfont is web font icons by icomoon.
+icomoon is the web app that you can create high quality icons as web fonts.
+https://icomoon.io/
+*/
+@font-face {
+  font-family: 'icomoon';
+  src: url(../lib/fonts/icomoon.eot?kyvxpq);
+  src: url(../lib/fonts/icomoon.eot?kyvxpq#iefix) format("embedded-opentype"), url(../lib/fonts/icomoon.ttf?kyvxpq) format("truetype"), url(../lib/fonts/icomoon.woff?kyvxpq) format("woff"), url(../lib/fonts/icomoon.svg?kyvxpq#icomoon) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 189, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 191, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.icon-home:before {
+  content: "\e900";
+}
+
+/* line 193, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.icon-clock:before {
+  content: "\e94e";
+}
+
+/* line 195, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.icon-search:before {
+  content: "\e986";
+}
+
+/*
+#styleguide
+sprite-sns-2x
+
+```
+<i class="sprite-sns-2x sprite-sns-facebook"></i>
+<i class="sprite-sns-2x sprite-sns-instagram"></i>
+<i class="sprite-sns-2x sprite-sns-twitter"></i>
+```
+*/
+/* line 207, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.sprite-sns-2x.sprite-sns-facebook {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 120%;
+  white-space: nowrap;
+  background-image: url(../images/sprite-sns-2x.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  width: 130px;
+  height: 127px;
+  background-size: 263px 257px;
+}
+
+/* line 209, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.sprite-sns-2x.sprite-sns-instagram {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 120%;
+  white-space: nowrap;
+  background-image: url(../images/sprite-sns-2x.png);
+  background-repeat: no-repeat;
+  background-position: -133px 0px;
+  width: 130px;
+  height: 127px;
+  background-size: 263px 257px;
+}
+
+/* line 211, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.sprite-sns-2x.sprite-sns-twitter {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 120%;
+  white-space: nowrap;
+  background-image: url(../images/sprite-sns-2x.png);
+  background-repeat: no-repeat;
+  background-position: 0px -130px;
+  width: 130px;
+  height: 127px;
+  background-size: 263px 257px;
+}
+
+/*
+#overview
+logo
+*/
+/* #styleguide logo ``` <a class="logo" href="./"> <img src="../../pc/images/logo.png" width="253" height="52" alt="LIG inc."/> </a> ``` */
+/* line 218, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.logo {
+  display: block;
+  width: 137px;
+  height: 28px;
+}
+
+/*
+#overview
+media
+*/
+/* #styleguide media style comment. ``` <article class="media"> <a class="media-link u-clear" href=""> <div class="media-thumbnail"> <img src="http://placekitten.com/200/120" height="120" width="200" alt=""> </div> <div class="media-body"> <time class="media-date" datetime="yyyy-mm-ddT00:00+09:00"> <i class="media-icon icon icon-clock"></i>mm/dd </time> <h1 class="media-heading">Title</h1> <p class="media-description">Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text...</p> </div> </a> </article> ``` */
+/* line 225, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.media-link {
+  display: block;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* line 227, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.media-link:hover {
+  text-decoration: none;
+}
+
+/* line 229, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.media-link:hover .media-thumbnail > img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* line 231, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.media-thumbnail {
+  float: left;
+  overflow: hidden;
+}
+
+/* line 233, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.media-thumbnail > img {
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+}
+
+/* line 235, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.media-body {
+  position: relative;
+  margin-left: 220px;
+}
+
+/* line 237, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.media-heading {
+  padding-right: 70px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* line 239, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.media-date {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 241, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.media-icon {
+  position: relative;
+  top: 1px;
+  margin-right: 5px;
+}
+
+/* line 243, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.media-description {
+  font-size: 18px;
+}
+
+/*
+#overview
+sns
+*/
+/* #styleguide sns ``` <div class="sns l-grid"> <ul class="sns-list l-grid-inner"> <li class="sns-item l-grid-item"> <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div> </li> <li class="sns-item l-grid-item"> <a href="https://twitter.com/share" class="twitter-share-button" data-via="LIG_J" data-lang="ja" data-size="large" data-count="vertical">ツイート</a> </li> <li class="sns-item l-grid-item"> <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> </li> <li class="sns-item l-grid-item"> <a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script> </li> <li class="sns-item l-grid-item"> <span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"e"});</script></span> </li> </ul> </div> ``` */
+/* line 250, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.sns {
+  text-align: center;
+}
+
+/* line 252, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.sns-inner {
+  margin: -5px;
+}
+
+/* line 254, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.sns-item {
+  vertical-align: bottom;
+  padding: 5px;
+}
+
+/* line 256, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.nav {
+  background-color: #fff;
+  width: 100%;
+  height: calc(100vh - 71px);
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  position: fixed;
+  z-index: 1;
+  margin-top: 71px;
+}
+
+/* line 258, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.nav-list {
+  padding-top: 70px;
+}
+
+/* line 260, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.nav-item {
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* line 262, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.nav-link {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  font-family: Helvetica, Arial, メイリオ, Meiryo, sans-serif;
+}
+
+/* line 264, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.nav.is-active {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/* line 266, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.button {
+  width: 100%;
+  background-color: #333;
+  display: block;
+}
+
+/* line 268, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.button-text {
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+/*
+#overview
+banner
+*/
+/* #styleguide banner ``` <a class="banner" href=""> <img src="http://placekitten.com/300/250" height="250" width="300" alt=""> </a> */
+/* line 275, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.banner {
+  display: block;
+}
+
+/* line 277, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.page-top {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 279, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.page-top-arrow {
+  display: block;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/*
+#overview
+headline
+*/
+/*
+#styleguide
+headline
+```
+<h1 class="headline">Headline</h1>
+*/
+/* line 291, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.headline, .single-body h2 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #000;
+}
+
+/* line 293, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.headline-mb {
+  margin-bottom: 20px;
+}
+
+/* line 295, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-header-category {
+  margin-bottom: 10px;
+}
+
+/* line 297, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-header-eyecatch {
+  min-height: 400px;
+  position: relative;
+}
+
+/* line 299, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-header-eyecatch > img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 301, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-header-meta {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 20px;
+}
+
+/* line 303, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-header-author {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 305, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-header-author > img {
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* line 307, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-header-author > span {
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+/* line 309, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-header-date {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+}
+
+/* line 311, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-header-date > time {
+  font-family: Helvetica, Arial, メイリオ, Meiryo, sans-serif;
+  font-size: 15px;
+}
+
+/* line 313, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-header-heading {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* line 315, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body p, .single-body div:not([class]), .single-body ol, .single-body ul, .single-body li, .single-body blockquote, .single-body iframe, .single-body dl {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* line 317, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body b, .single-body em, .single-body strong {
+  font-weight: bold;
+}
+
+/* line 319, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body i:not([class]) {
+  font-style: italic;
+}
+
+/* line 321, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body u {
+  -webkit-transition-duration: underline;
+  transition-duration: underline;
+}
+
+/* line 323, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body h2 {
+  text-align: left !important;
+  margin: 40px 0;
+}
+
+/* line 325, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* line 327, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body iframe {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 329, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body .movie {
+  position: relative;
+  width: 100%;
+  padding: 56.25% 0 0;
+}
+
+/* line 331, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body .movie iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 333, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* line 335, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body dl:not([class]) {
+  background-color: #ccc;
+  padding: 20px;
+}
+
+/* line 337, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body dl:not([class]) > dt {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* line 339, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body a {
+  text-decoration: underline;
+}
+
+/* line 341, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body a:hover {
+  text-decoration: none;
+}
+
+/* line 343, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body ul li, .single-body ol li {
+  margin: 0 0 10px;
+}
+
+/* line 345, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body ul li:last-child, .single-body ol li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 347, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body ul li {
+  position: relative;
+  padding-left: 20px;
+}
+
+/* line 349, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body ul li:before {
+  content: "";
+  background-color: #000;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+
+/* line 351, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body ul li ul {
+  margin: 5px 0 5px 10px;
+}
+
+/* line 353, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body ol li {
+  list-style: decimal;
+  margin-left: 20px;
+}
+
+/* line 355, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body blockquote {
+  border: 1px solid #ccc;
+  position: relative;
+  padding: 20px 20px 20px 60px;
+}
+
+/* line 357, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body blockquote:before {
+  content: '”';
+  font-size: 50px;
+  color: #ccc;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* line 359, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body blockquote > p {
+  margin: 0;
+}
+
+/* line 361, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body blockquote a {
+  text-decoration: underline;
+}
+
+/* line 363, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body blockquote > small {
+  margin-top: 10px;
+  display: block;
+  color: #ccc;
+}
+
+/* line 365, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-body blockquote > small a {
+  color: #ccc;
+}
+
+/*
+#overview
+category
+*/
+/* #styleguide category ``` <a class=";ctcategory" href=""> <img src="http://placekitten.com/300/250" height="250" width="300" alt=""> </a> */
+/* line 372, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.category {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+}
+
+/* line 374, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.category-a {
+  background-color: #825794;
+}
+
+/* line 376, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.category-b {
+  background-color: #ffbb4d;
+}
+
+/* line 378, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.category-c {
+  background-color: #e74c3c;
+}
+
+/*
+#overview
+border
+*/
+/*
+#styleguide
+border
+```
+<hr class="border">
+*/
+/* line 390, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.border {
+  display: block;
+  border-top: 1px solid #000;
+  margin: 30px 0;
+}
+
+/*
+#overview
+banner
+*/
+/*
+#styleguide
+box
+```
+<div class="box"></div>
+*/
+/* line 402, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.box {
+  display: block;
+  padding: 20px;
+  background-color: #eee;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+/*
+#overview
+input
+*/
+/*
+#styleguide
+input
+```
+<input class="input" type="text" placeholder="ex)...">
+```
+*/
+/* line 415, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.input {
+  display: block;
+  width: 100%;
+  border: 2px solid #95989a;
+  background-color: #fff;
+  font-weight: normal;
+  line-height: 48px;
+  padding: 10px 15px;
+  height: 100%;
+}
+
+/* line 417, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.input::-webkit-input-placeholder {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color: #ddd;
+}
+
+/* line 419, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.input:-ms-input-placeholder {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color: #ddd;
+}
+
+/* line 421, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.input::placeholder {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color: #ddd;
+}
+
+/* line 423, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.input-image {
+  display: none;
+}
+
+/* line 425, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.input-contents {
+  overflow: scroll;
+  line-height: 1.5;
+}
+
+/* line 427, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.input-submit {
+  display: none;
+}
+
+/* line 429, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.ie .input {
+  line-height: 1;
+}
+
+/* line 431, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.ie10 .input {
+  line-height: normal;
+}
+
+/*
+#overview
+textarea
+*/
+/*
+#styleguide
+textarea
+```
+<textarea class="textarea" placeholder="" name="" cols="30" rows="10"></textarea>
+```
+*/
+/* line 444, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.textarea {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  width: 100%;
+  padding: 15px;
+  height: 200px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+/*
+#overview
+share
+*/
+/* #styleguide share ``` <div class="share l-grid"> <ul class="share-list l-grid-inner"> <li class="share-item l-grid-item"> <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div> </li> <li class="share-item l-grid-item"> <a href="https://twitter.com/share" class="twitter-share-button" data-via="LIG_J" data-lang="ja" data-size="large" data-count="vertical">ツイート</a> </li> <li class="share-item l-grid-item"> <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> </li> <li class="share-item l-grid-item"> <a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script> </li> <li class="share-item l-grid-item"> <span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"e"});</script></span> </li> </ul> </div> ``` */
+/* line 451, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.share-list {
+  font-size: 0;
+  letter-spacing: 0;
+  margin: -5px;
+  text-align: center;
+}
+
+/* line 453, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.share-item {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 5px;
+}
+
+/* line 455, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.share-item > a {
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 20px;
+}
+
+/* line 457, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.share-item > a:hover {
+  text-decoration: none;
+  opacity: .7;
+}
+
+/* line 459, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.share-item-facebook > a {
+  background-color: #305097;
+}
+
+/* line 461, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.share-item-twitter > a {
+  background-color: #00aced;
+}
+
+/* line 463, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.share-item-line > a {
+  background-color: #00c300;
+}
+
+/* line 465, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.share-item-hatena > a {
+  background-color: #00A4D4;
+}
+
+/* line 467, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.hamburger {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 31px;
+}
+
+/* line 469, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.hamburger-item {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #95989a;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+/* line 471, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.hamburger-item:nth-of-type(1) {
+  top: 0;
+}
+
+/* line 473, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.hamburger-item:nth-of-type(2) {
+  top: 14px;
+}
+
+/* line 475, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.hamburger-item:last-of-type {
+  top: 28px;
+}
+
+/* line 477, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.hamburger.is-active .hamburger-item:nth-child(1) {
+  -webkit-transform: translateY(14px) rotate(-45deg);
+  -ms-transform: translateY(14px) rotate(-45deg);
+  transform: translateY(14px) rotate(-45deg);
+}
+
+/* line 479, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.hamburger.is-active .hamburger-item:nth-child(2) {
+  opacity: 0;
+}
+
+/* line 481, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.hamburger.is-active .hamburger-item:nth-child(3) {
+  -webkit-transform: translateY(-14px) rotate(45deg);
+  -ms-transform: translateY(-14px) rotate(45deg);
+  transform: translateY(-14px) rotate(45deg);
+}
+
+/* line 483, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.card {
+  border: 2px solid #95989a;
+}
+
+/* line 485, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.card-link {
+  display: block;
+}
+
+/* line 487, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.card-image {
+  width: 100%;
+}
+
+/* line 489, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.card-bottom {
+  padding: 15px 20px;
+}
+
+/* line 491, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Helvetica, Arial, メイリオ, Meiryo, sans-serif;
+  color: black;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* line 493, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.card-date {
+  display: block;
+  font-size: 15px;
+  font-family: Helvetica, Arial, メイリオ, Meiryo, sans-serif;
+  color: #95989a;
+  letter-spacing: 0.04em;
+  margin-top: 5px;
+}
+
+/* line 495, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.archive-item {
+  margin-top: 20px;
+}
+
+/* line 497, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.archive-item:nth-of-type(1) {
+  margin-top: 0;
+}
+
+/* line 499, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.archive-button {
+  margin-top: 40px;
+  display: block;
+}
+
+/* line 501, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.archive-admin {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+/* line 503, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.archive-admin .archive-item {
+  padding-top: 10px;
+  margin-top: 0;
+}
+
+/* line 505, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.archive-admin .archive-item:nth-of-type(1) {
+  border-top: 2px solid #95989a;
+}
+
+/* line 507, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.copyright {
+  display: block;
+  font-family: Helvetica, Arial, メイリオ, Meiryo, sans-serif;
+  font-size: 20px;
+  color: #95989a;
+  letter-spacing: 0.05em;
+}
+
+/* line 509, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single {
+  font-family: Helvetica, Arial, メイリオ, Meiryo, sans-serif;
+}
+
+/* line 511, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-image {
+  width: 100vw;
+}
+
+/* line 513, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-title {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-top: 10px;
+  letter-spacing: 0.03em;
+}
+
+/* line 515, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-date {
+  display: block;
+  font-size: 15px;
+  color: #95989a;
+  margin-top: 8px;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+}
+
+/* line 517, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.single-desc {
+  font-size: 20px;
+  font-family: Helvetica, Arial, メイリオ, Meiryo, sans-serif;
+  margin: 27px 0;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* line 519, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.page-number {
+  font-size: 30px;
+  font-family: Helvetica, Arial, メイリオ, Meiryo, sans-serif;
+  color: #333;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  letter-spacing: 0.05em;
+}
+
+/* line 521, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.page-number span {
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+/* line 523, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.paginate {
+  letter-spacing: 0;
+  font-size: 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* line 525, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.paginate-prev {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  position: relative;
+}
+
+/* line 527, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.paginate-prev-arrow {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 8px solid transparent;
+  border-right: 8px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 529, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.paginate-next {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  position: relative;
+  margin-left: 10px;
+}
+
+/* line 531, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.paginate-next-arrow {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 8px solid transparent;
+  border-left: 8px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 533, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.paginate-number {
+  display: inline-block;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: #fff;
+  font-family: Helvetica, Arial, メイリオ, Meiryo, sans-serif;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+/* line 535, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.paginate .is-current {
+  pointer-events: none;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #333;
+  padding-top: 3px;
+}
+
+/* line 537, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.paginate .is-disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* line 539, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.form {
+  font-size: 20px;
+  font-family: Helvetica, Arial, メイリオ, Meiryo, sans-serif;
+  color: #95989a;
+}
+
+/* line 541, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.form-file {
+  display: block;
+  width: 100%;
+  height: 35px;
+  border: 2px solid #95989a;
+  margin-top: 10px;
+}
+
+/* line 543, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.form-file-button {
+  display: block;
+  float: right;
+  width: 60px;
+  height: 100%;
+  font-weight: bold;
+  background: #95989a;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  padding-top: 7px;
+  padding-left: 5px;
+}
+
+/* line 545, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.form-title {
+  display: block;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* line 547, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.form-body {
+  height: 60px;
+}
+
+/* line 549, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.form-textarea {
+  height: 280px;
+}
+
+/* line 551, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.form-button {
+  display: block;
+  margin-top: 20px;
+}
+
+/* line 553, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.post-article {
+  display: block;
+  border-bottom: 2px solid #95989a;
+  padding-bottom: 10px;
+}
+
+/* line 555, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.post-article-date {
+  font-size: 15px;
+  color: #95989a;
+  font-family: Helvetica, Arial, メイリオ, Meiryo, sans-serif;
+  font-weight: bold;
+}
+
+/* line 557, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.post-article-title {
+  font-size: 20px;
+  color: black;
+  font-family: Helvetica, Arial, メイリオ, Meiryo, sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+/* 6-utility */
+/*
+Utility
+
+This means helper class like a snippet.
+Utility should always have the prefix "u-".
+And you should not feel free to add a new Utility class.
+*/
+/* line 567, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.u-hidden {
+  overflow: hidden;
+  text-indent: 120%;
+  white-space: nowrap;
+}
+
+/* line 569, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.u-clear {
+  zoom: 1;
+}
+
+/* line 571, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.u-clear:before, .u-clear:after {
+  content: "";
+  display: block;
+}
+
+/* line 573, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.u-clear:after {
+  clear: both;
+}
+
+/* line 575, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.u-elps {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+}
+
+/* line 577, /Users/ringmdcebu/Documents/lig/blog/lig-blog/app/assets/stylesheets/style.scss */
+.u-notap {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*# sourceMappingURL=maps/style.css.map */
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
