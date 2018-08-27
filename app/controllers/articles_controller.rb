@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 	before_action :authenticate_user!
 	def index
-		
+		@articles = Article.all
 	end
 
 	def new
@@ -12,9 +12,8 @@ class ArticlesController < ApplicationController
 		if params
 			@article = Article.new(article_params)
 			@article.user_id = current_user.id
-			logger.info @article.as_json
 			if @article.save
-				render action: "index" 
+				redirect_to action: "index" 
 			else
 				render @article.errors.full_messages
 			end

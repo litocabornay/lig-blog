@@ -28788,3 +28788,226 @@ Processing by BlogController#archives as HTML
 Completed 200 OK in 118ms (Views: 88.3ms | ActiveRecord: 3.4ms)
 
 
+Started GET "/articles/" for ::1 at 2018-08-28 01:11:37 +0800
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+Completed 401 Unauthorized in 21ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2018-08-28 01:11:37 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (296.7ms)
+Completed 200 OK in 420ms (Views: 386.7ms | ActiveRecord: 10.3ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2018-08-28 01:11:45 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kfQ6GLVLKwK2VeMqjYx1jaLLhR9a4UY8i9qpVy5UWadiuwYczNHsGkpRk0GTCuJHsKo4Srk8kBntGQ1PdwK3iQ==", "user"=>{"email"=>"admin@ligblog.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@ligblog.com"], ["LIMIT", 1]]
+Redirected to http://localhost:5000/articles
+Completed 302 Found in 193ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/articles" for ::1 at 2018-08-28 01:11:45 +0800
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 86ms (Views: 64.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/articles" for ::1 at 2018-08-28 01:11:48 +0800
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 118ms (Views: 77.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/articles/new" for ::1 at 2018-08-28 01:11:57 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 87ms (Views: 66.0ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/articles" for ::1 at 2018-08-28 01:12:11 +0800
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RELrNoGiCVG7pue1WTksp2pYInlb5UPPGdp4jJeaEuCgAUoNOxryozyRVxDE+BDV2Hw6pn1aGoct8IqBTViSyg==", "article"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fec116b05d0 @tempfile=#<Tempfile:/var/folders/ql/pyynzcy51ndfmz0b61zrtqj00000gn/T/RackMultipart20180828-52244-82xese.jpg>, @original_filename="sample3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"sample3.jpg\"\r\nContent-Type: image/jpeg\r\n">, "title"=>"wew article", "contents"=>"weahh"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+{"id"=>nil, "title"=>"wew article", "contents"=>"weahh", "image"=>#<ImageUploader:0x007fec0af94630 @model=#<Article id: nil, title: "wew article", contents: "weahh", image: nil, user_id: 1, created_at: nil, updated_at: nil>, @mounted_as=:image, @file=#<CarrierWave::SanitizedFile:0x007fec0ab122d8 @file="/Users/ringmdcebu/Documents/lig/blog/lig-blog/public/uploads/tmp/1535389931-52244-0001-9747/sample3.jpg", @original_filename="sample3.jpg", @content_type="image/jpeg", @content=nil>, @filename="sample3.jpg", @cache_id="1535389931-52244-0001-9747", @versions={}, @original_filename="sample3.jpg", @cache_storage=#<CarrierWave::Storage::File:0x007fec12053da8 @uploader=#<ImageUploader:0x007fec0af94630 ...>, @cache_called=nil>>, "user_id"=>1, "created_at"=>nil, "updated_at"=>nil}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "contents", "image", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "wew article"], ["contents", "weahh"], ["image", "sample3.jpg"], ["user_id", 1], ["created_at", "2018-08-27 17:12:11.228204"], ["updated_at", "2018-08-27 17:12:11.228204"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 9.2ms)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/articles/index.html.erb:15:in `_app_views_articles_index_html_erb___1216398624548465941_70325932069380'
+  app/controllers/articles_controller.rb:17:in `create'
+
+Started POST "/__better_errors/272d27aa0fc3d922/variables" for ::1 at 2018-08-28 01:12:11 +0800
+Started GET "/articles" for ::1 at 2018-08-28 01:12:48 +0800
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 113ms (Views: 70.7ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/articles/new" for ::1 at 2018-08-28 01:13:11 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 118ms (Views: 102.0ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/articles" for ::1 at 2018-08-28 01:13:14 +0800
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qNhZhJexDua11DcO6QcZ8Zyd+1CEK4eZwW+f3Ju/hH5Mm/i/LQn1FDLjh6t0xiWDLrnjj6KU3tH1RW3RQX0EVA==", "article"=>{"title"=>"faqf", "contents"=>"awdaw"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "contents", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "faqf"], ["contents", "awdaw"], ["user_id", 1], ["created_at", "2018-08-27 17:13:15.010043"], ["updated_at", "2018-08-27 17:13:15.010043"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (40.3ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 4.1ms)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/articles/index.html.erb:15:in `_app_views_articles_index_html_erb___1216398624548465941_70325894141780'
+  app/controllers/articles_controller.rb:16:in `create'
+
+Started POST "/__better_errors/82b3157b77e9257a/variables" for ::1 at 2018-08-28 01:13:15 +0800
+Started GET "/articles" for ::1 at 2018-08-28 01:13:51 +0800
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 68ms (Views: 59.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/articles" for ::1 at 2018-08-28 01:14:25 +0800
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 5.4ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_end, expecting ':'
+             end    
+                ^:
+  app/views/articles/index.html.erb:23:in `'
+
+Started POST "/__better_errors/0df080af617a343e/variables" for ::1 at 2018-08-28 01:14:25 +0800
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/articles" for ::1 at 2018-08-28 01:14:33 +0800
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 62ms (Views: 55.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/articles/new" for ::1 at 2018-08-28 01:14:40 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 87ms (Views: 75.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/articles" for ::1 at 2018-08-28 01:14:44 +0800
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mxcspOAjYUbQNzkMfN3o5QeLPspmE2EEWXUkk6vKYLh/VI2fWpuatFcAianhHNSXta8mFUCsOExtX9aecQjgkg==", "article"=>{"title"=>"bi", "contents"=>"lat2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "contents", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "bi"], ["contents", "lat2"], ["user_id", 1], ["created_at", "2018-08-27 17:14:44.572722"], ["updated_at", "2018-08-27 17:14:44.572722"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 8.8ms)
+
+
+
+NoMethodError - undefined method `any?' for nil:NilClass:
+  app/views/articles/index.html.erb:14:in `_app_views_articles_index_html_erb___1216398624548465941_70325938016960'
+  app/controllers/articles_controller.rb:16:in `create'
+
+Started POST "/__better_errors/863194c91ad9fa4b/variables" for ::1 at 2018-08-28 01:14:44 +0800
+Started GET "/articles" for ::1 at 2018-08-28 01:16:25 +0800
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 103ms (Views: 61.1ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/articles/new" for ::1 at 2018-08-28 01:16:30 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 74ms (Views: 62.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/articles" for ::1 at 2018-08-28 01:16:38 +0800
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ap7tPLqfXcxeNZN2glDT98BRTo59/n28fJSXmX2P4nTm3UwHACemPtkCI9Mfke+FcnVWUVtBJPRIvmWUp01iXg==", "article"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fec0e8b0388 @tempfile=#<Tempfile:/var/folders/ql/pyynzcy51ndfmz0b61zrtqj00000gn/T/RackMultipart20180828-52244-j3ww7l.jpg>, @original_filename="sample2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"sample2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "title"=>"wat", "contents"=>"dawwq11"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "contents", "image", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "wat"], ["contents", "dawwq11"], ["image", "sample2.jpg"], ["user_id", 1], ["created_at", "2018-08-27 17:16:38.398790"], ["updated_at", "2018-08-27 17:16:38.398790"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:5000/articles
+Completed 302 Found in 26ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/articles" for ::1 at 2018-08-28 01:16:38 +0800
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 41ms (Views: 35.9ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2018-08-28 01:16:48 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"87BRREDsgHbd6SsNuqp10rLWSFBpweNRi6BlU1kTuKxqI9/O/lzpbTcDgL7g4YuTxFs0FzlAQficW8YfyanRJg=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:5000/
+Completed 302 Found in 66ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 01:16:48 +0800
+Processing by BlogController#index as HTML
+  Rendering blog/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered blog/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 96ms (Views: 86.0ms | ActiveRecord: 1.2ms)
+
+
