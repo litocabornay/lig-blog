@@ -181,7 +181,7 @@ function nav() {
         e.preventDefault();
         $hamburger.toggleClass(_const2.default.ACTIVE_CLASS);
         $nav.toggleClass(_const2.default.ACTIVE_CLASS);
-
+        console.log("hamburger!")
         if ($hamburger.hasClass(_const2.default.ACTIVE_CLASS)) {
             scrollLock();
         } else {
