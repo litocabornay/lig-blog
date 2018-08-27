@@ -5,79 +5,28 @@
         <div class="l-main-block"></div>
         <div class="archive">
             <ul class="archive-list">
+
+            <% @articles.each do |a| %>
                 <li class="archive-item">
                     <article class="card">
-                        <a href="#" class="card-link">
-                            <%= image_tag('sample1.jpg', alt:"",class:"card-image") %> 
+                        <a href='blog/<%=a.id%>' + #{a.id} class="card-link">
+                            <% image_url = a.image.url %>
+                            <%= image_tag(image_url, alt:"",class:"card-image") if a.image? %> 
                             <div class="card-bottom">
-                                <h1 class="card-title">The Best Wii U Games of 2016</h1>
-                                <time class="card-date" datetime="2016-9-16">
-                                    16 Sep, 2016
-                                </time>
-                            </div>
-                        </a>
-                    </article>
-                        </li>
-                    
-                <li class="archive-item">
-                    <article class="card">
-                        <a href="#" class="card-link">
-                            <%= image_tag('sample2.jpg', alt:"",class:"card-image") %> 
-                            <div class="card-bottom">
-                                <h1 class="card-title">VOTING FOR THE PEOPLE&#39;S CHOICE BEST WII U GAME OF 2016!</h1>
-                                <time class="card-date" datetime="2016-9-16">
-                                    16 Sep, 2016
+                                <h1 class="card-title"><%= a.title %></h1>
+                                <time class="card-date" datetime="<%= a.created_at %>">
+                                    <%= a.created_at.to_date.to_formatted_s(:rfc822) %>
                                 </time>
                             </div>
                         </a>
                     </article>
                 </li>
-                    
-                <li class="archive-item">
-                    <article class="card">
-                        <a href="#" class="card-link">
-                            <%= image_tag('sample3.jpg', alt:"",class:"card-image") %> 
-                            <div class="card-bottom">
-                                <h1 class="card-title">Gears of War film to rise like a Fenix thanksto Universal</h1>
-                                <time class="card-date" datetime="2016-9-16">
-                                    16 Sep, 2016
-                                </time>
-                            </div>
-                        </a>
-                    </article>
-                </li>
-                    
-                <li class="archive-item">
-                    <article class="card">
-                        <a href="#" class="card-link">
-                            <%= image_tag('sample4.jpg', alt:"",class:"card-image") %> 
-                            <div class="card-bottom">
-                                <h1 class="card-title">Trailer Roundup - October 5, 2016</h1>
-                                <time class="card-date" datetime="2016-9-16">
-                                    16 Sep, 2016
-                                </time>
-                            </div>
-                        </a>
-                    </article>
-                </li>
-                    
-                <li class="archive-item">
-                    <article class="card">
-                        <a href="#" class="card-link">
-                            <%= image_tag('sample5.jpg', alt:"",class:"card-image") %> 
-                            <div class="card-bottom">
-                                <h1 class="card-title">PlayStation VR: A Hardcore Console Gamer’s Perspective</h1>
-                                <time class="card-date" datetime="2016-9-16">
-                                    16 Sep, 2016
-                                </time>
-                            </div>
-                        </a>
-                    </article>
-                </li>
+            <% end %>
+                
                     
             </ul>
         </div>
-        <a href="#" class="archive-button">
+        <a href="/archives" class="archive-button">
             <div class="button">
                 <p class="button-text">More</p>
             </div>
@@ -86,4 +35,4 @@
     <!--end l-main-->
 
 </div>
-<!--end l-contents-->
+<!--end l-contents

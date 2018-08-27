@@ -35,6 +35,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Use Modernzr gem
 gem 'modernizr-rails'
+# Use Pagination
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
+# Use carrier wave
+gem 'carrierwave'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

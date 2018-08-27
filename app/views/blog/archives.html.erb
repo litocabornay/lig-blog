@@ -1,0 +1,50 @@
+<!--start l-contents-->
+    <div class="l-container u-clear">
+
+        <!--start l-main-->
+        <main class="l-main js-main">
+            <div class="l-main-block"></div>
+                <div class="page-number">
+                    <% page = params[:page] %>
+                    Page <span ><%= @articles.current_page %>/ <%= @articles.total_pages %>  </span>
+                </div>
+                <div class="archive">
+                    <ul class="archive-list">
+                        
+                        <% @articles.each do |a| %>
+                            <li class="archive-item">
+                                <article class="card">
+                                    <a href='blog/<%=a.id%>' + #{a.id} class="card-link">
+                                        <% image_url = a.image.url %>
+                                        <%= image_tag(image_url, alt:"",class:"card-image") if a.image? %> 
+                                        <div class="card-bottom">
+                                            <h1 class="card-title"><%= a.title %></h1>
+                                            <time class="card-date" datetime="<%= a.created_at %>">
+                                                <%= a.created_at.to_date.to_formatted_s(:rfc822) %>
+                                            </time>
+                                        </div>
+                                    </a>
+                                </article>
+                            </li>
+                        <% end %>
+                    </ul>
+                </div>
+                <%= will_paginate @articles %>
+               <!--  <div class="paginate">
+                    <a href="#" class="paginate-prev is-disable">
+                        <span class="paginate-prev-arrow"></span>
+                    </a>
+                    <a href="#" class="paginate-number is-current">1</a>
+                    <a href="#" class="paginate-number">2</a>
+                    <a href="#" class="paginate-number">3</a>
+                    <a href="#" class="paginate-number">4</a>
+                    <a href="#" class="paginate-next">
+                        <span class="paginate-next-arrow"></span>
+                    </a>
+                </div> -->
+            </div>
+        </main>
+        <!--end l-main-->
+
+    </div>
+    <!--end l-contents-->
